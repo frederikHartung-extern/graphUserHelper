@@ -1,0 +1,7 @@
+spring:
+  application.name=graphUserHelper
+
+exo:
+  appId: "" #please overwrite in application.default.yml
+  secret: "" #please overwrite in application.default.yml
+  tenantId: "" #please overwrite in application.default.yml
