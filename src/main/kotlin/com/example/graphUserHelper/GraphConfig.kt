@@ -18,6 +18,9 @@ open class GraphConfig {
         @Value(value = "\${exo.tenantId}") tenantId: String
 
     ): ClientSecretCredential {
+        if(clientId == "" || secret == "" || tenantId == ""){
+            throw IllegalArgumentException("Please provide valid values for exo.appId, exo.secret and exo.tenantId in the application-default.yml file!")
+        }
         return ClientSecretCredentialBuilder()
             .clientId(clientId)
             .clientSecret(secret)
